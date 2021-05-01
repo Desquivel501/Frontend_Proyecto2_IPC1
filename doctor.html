@@ -249,7 +249,7 @@
             var cadena = '';
             tabla.innerHTML = "";
 
-            fetch('http://127.0.0.1:3000/citas/doctor/'+doctor,{
+            fetch('https://backend-ipc1-202010055.herokuapp.com/citas/doctor/'+doctor,{
                 method: 'GET' })
                 .then(res => res.json())
                 .catch(err =>{
@@ -280,7 +280,7 @@
             var cadena = '';
             tabla.innerHTML = "";
 
-            fetch('http://127.0.0.1:3000/citas_pendientes',{
+            fetch('https://backend-ipc1-202010055.herokuapp.com/citas_pendientes',{
                 method: 'GET' })
                 .then(res => res.json())
                 .catch(err =>{
@@ -317,7 +317,7 @@
             }
 
     
-            fetch('http://127.0.0.1:3000/citas/' + cita_id + '/aceptar',{
+            fetch('https://backend-ipc1-202010055.herokuapp.com/citas/' + cita_id + '/aceptar',{
                 method: 'POST',
                 body: JSON.stringify(objeto),
                 headers:{
@@ -343,7 +343,7 @@
             var r = confirm("¿Esta seguro que desea rechazar esta cita?");
             if (r == true) {
                 
-                fetch('http://127.0.0.1:3000/citas/' + cita_id + '/rechazar',{
+                fetch('https://backend-ipc1-202010055.herokuapp.com/citas/' + cita_id + '/rechazar',{
                     method: 'POST',
                     body: JSON.stringify(objeto),
                     headers:{
@@ -369,7 +369,7 @@
                 'id_cita': cita_id
             }
        
-            fetch('http://127.0.0.1:3000/citas/' + cita_id + '/completar',{
+            fetch('https://backend-ipc1-202010055.herokuapp.com/citas/' + cita_id + '/completar',{
                 method: 'POST',
                 body: JSON.stringify(objeto),
                 headers:{

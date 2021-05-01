@@ -257,7 +257,7 @@
             var tabla = document.querySelector('#med_container');
             var cadena = '';
 
-            fetch('http://127.0.0.1:3000/Med',{
+            fetch('https://backend-ipc1-202010055.herokuapp.com/Med',{
                 method: 'GET',
                 })
                 .then(res => res.json())
@@ -302,7 +302,7 @@
                 'nombre':nombre_usuario,
             }
 
-            fetch('http://127.0.0.1:3000/Med/'+ med +"/agregar",{
+            fetch('https://backend-ipc1-202010055.herokuapp.com/Med/'+ med +"/agregar",{
                 method: 'POST',
                 body: JSON.stringify(objeto),
                 headers:{
@@ -330,7 +330,7 @@
             tabla.innerHTML = "";
             var total = 0
 
-            fetch('http://127.0.0.1:3000/compras',{
+            fetch('https://backend-ipc1-202010055.herokuapp.com/compras',{
                 method: 'GET' })
                 .then(res => res.json())
                 .catch(err =>{
@@ -371,7 +371,7 @@
                 'nombre':nombre_usuario,
             }
 
-            fetch('http://127.0.0.1:3000/Med/'+ med +"/quitar",{
+            fetch('https://backend-ipc1-202010055.herokuapp.com/Med/'+ med +"/quitar",{
                 method: 'POST',
                 body: JSON.stringify(objeto),
                 headers:{
@@ -409,7 +409,7 @@
             }
             
 
-            fetch('http://127.0.0.1:3000/Cita',{
+            fetch('https://backend-ipc1-202010055.herokuapp.com/Cita',{
                 method: 'POST',
                 body: JSON.stringify(objeto),
                 headers:{
@@ -431,7 +431,7 @@
             var tabla = document.querySelector('#detalles_cita');
             var cadena = '';
 
-            fetch('http://127.0.0.1:3000/citas/'+localStorage.getItem("logged_user"),{
+            fetch('https://backend-ipc1-202010055.herokuapp.com/citas/'+localStorage.getItem("logged_user"),{
                 method: 'GET',
                 })
                 .then(res => res.json())

@@ -215,7 +215,7 @@
 
             var user = localStorage.getItem("user");
 
-            fetch('http://127.0.0.1:3000/Doctores/' + user,{
+            fetch('https://backend-ipc1-202010055.herokuapp.com/Doctores/' + user,{
                 method: 'GET',
                 })
                 .then(res => res.json())
