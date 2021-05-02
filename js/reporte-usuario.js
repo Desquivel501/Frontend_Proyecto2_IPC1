@@ -167,21 +167,14 @@ function generar_reporte(){
                 </html>
                                 `
             
-                               /*  html2pdf(plantilla, {
+                         /*       html2pdf(plantilla, {
                                     filename:     'myfile.pdf',
                                     image:        { type: 'jpeg', quality: 0.98 },
                                     html2canvas:  { scale: 2, logging: true, dpi: 192, letterRendering: true },
                                     jsPDF:        { unit: 'mm', format: 'a4', orientation: 'portrait' }
-                                  }); */
-
-                                  var opt = {
-                                    filename:     'myfile.pdf',
-                                    jsPDF:        {orientation: 'L' }
-                                  };
-
-                                html2pdf().set(opt).from(plantilla).save();
-
-                                /*  html2pdf().from(plantilla).save(); */
+                                  });
+ */
+                                html2pdf().from(plantilla).save();
                     
             })
 }
