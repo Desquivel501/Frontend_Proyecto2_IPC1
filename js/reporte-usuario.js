@@ -174,7 +174,16 @@ function generar_reporte(){
                                     jsPDF:        { unit: 'mm', format: 'a4', orientation: 'portrait' }
                                   }); */
 
-                                 html2pdf().from(plantilla).save();
+                                  var opt = {
+                                    margin:       1,
+                                    filename:     'myfile.pdf',
+                                    image:        { type: 'jpeg', quality: 0.98 },
+                                    html2canvas:  { scale: 2 },
+                                    jsPDF:        { unit: 'in', format: 'letter', orientation: 'portrait' }
+                                  };
+                                html2pdf().set(opt).from(plantilla).save();
+
+                                /*  html2pdf().from(plantilla).save(); */
                     
             })
 }
