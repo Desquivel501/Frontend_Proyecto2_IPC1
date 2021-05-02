@@ -124,8 +124,43 @@ function generar_reporte(){
                         <div class="invoice-box">
                             <table cellpadding="0" cellspacing="0">
                                 
-                                <h1 text-align: center;>Reporte Pacientes</h1>
-                                &nbsp;
+                            <tr class="top">
+                            <td colspan="2">
+                                <table>
+                                    <tr>
+                                        <td class="title">
+                                            <img src="https://www.sparksuite.com/images/logo.png" style="width: 100%; max-width: 300px" />
+                                        </td>
+        
+                                        <td>
+                                            Invoice #: 123<br />
+                                            Created: January 1, 2015<br />
+                                            Due: February 1, 2015
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+        
+                        <tr class="information">
+                            <td colspan="2">
+                                <table>
+                                    <tr>
+                                        <td>
+                                            Sparksuite, Inc.<br />
+                                            12345 Sunny Road<br />
+                                            Sunnyville, CA 12345
+                                        </td>
+        
+                                        <td>
+                                            Acme Corp.<br />
+                                            John Doe<br />
+                                            john@example.com
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
                                         
                                         <table class="table table-bordered" id="tabla_pacientes" style="width:80%; text-align: center;">
                                             <thead class="table-primary">
