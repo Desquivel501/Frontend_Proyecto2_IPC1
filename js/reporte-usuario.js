@@ -186,6 +186,7 @@ function generar_reporte(){
                                 `
             
                                 html2pdf(plantilla, {
+                                    margin:       10,
                                     filename:     'myfile.pdf',
                                     image:        { type: 'jpeg', quality: 0.98 },
                                   });
