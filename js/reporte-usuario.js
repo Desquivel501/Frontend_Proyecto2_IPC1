@@ -177,7 +177,7 @@ function generar_reporte(){
                                   var opt = {
                                     filename:     'myfile.pdf',
                                     image:        { type: 'jpeg', quality: 0.98 },
-                                    jsPDF:        { unit: 'in', format: 'letter', orientation: 'L' }
+                                    jsPDF:        {orientation: 'L' }
                                   };
 
                                 html2pdf().set(opt).from(plantilla).save();
