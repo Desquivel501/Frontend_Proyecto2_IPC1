@@ -120,10 +120,7 @@ function generar_reporte(){
                         <div class="invoice-box">
                             <table cellpadding="0" cellspacing="0">
                                 
-                                <section class="blog spad">
-                                
-                                    
-                                    <div style="margin-right: 90px; margin-left: 90px;">
+                                <h1>Reporte Pacientes</h1>
                                         
                                         <table class="table table-bordered" id="tabla_pacientes" style="width:80%; text-align: center;">
                                             <thead class="table-primary">
@@ -156,8 +153,7 @@ function generar_reporte(){
                             plantilla +=`                           
                                             </tbody>
                                         </table>
-                                    </div>
-                                </section>
+
 
                                 </tr>
                             </table>
