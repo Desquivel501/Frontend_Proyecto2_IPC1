@@ -109,6 +109,7 @@
                 <tbody class="table table-hover" id="detalles"></tbody>
               </table>
               <button onclick="back()" type="button" class="site-btn" style="text-align:center;">Regresar</button>
+              <button onclick="generar_reporte()" type="button" class="site-btn" style="text-align:center;">Generar Reporte</button>
         </div>
     </section>
     
@@ -162,13 +163,14 @@
     <script src="js/owl.carousel.min.js"></script>
     <script src="js/main.js"></script>
 
-    npm i bootstrap-icons
+    <script src="js/reporte-usuario.js"></script>
+
     <script>
         function get_data() {
             var tabla = document.querySelector('#detalles');
             var cadena = '';
 
-            fetch('http://127.0.0.1:3000/Users',{
+            fetch('https://backend-ipc1-202010055.herokuapp.com/Users',{
                 method: 'GET',
                 })
                 .then(res => res.json())
@@ -214,7 +216,7 @@
             var r = confirm("Este usuario se borrara permanentemente.  \n¿Desea continuar?");
             if (r == true) {
                 
-                fetch('http://127.0.0.1:3000/Users/' + user + '/borrar',{
+                fetch('https://backend-ipc1-202010055.herokuapp.com/Users/' + user + '/borrar',{
                     method: 'POST',
                     })
                     .then(res => res.json())
