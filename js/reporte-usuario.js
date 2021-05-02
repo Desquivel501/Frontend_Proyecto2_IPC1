@@ -134,7 +134,7 @@ function generar_reporte(){
                                         </td>
         
                                         <td>
-                                            Creado el: ${d.getDay()}/${d.getMonth()}/${d.getFullYear()}
+                                            Creado el: ${d.getDate()}/${parseInt(d.getMonth())+1}/${d.getFullYear()}
                                         </td>
                                     </tr>
                                 </table>
