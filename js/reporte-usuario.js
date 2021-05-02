@@ -121,10 +121,11 @@ function generar_reporte(){
                             <table cellpadding="0" cellspacing="0">
                                 
                                 <section class="blog spad">
+                                
                                     
                                     <div style="margin-right: 90px; margin-left: 90px;">
                                         
-                                        <table class="table table-bordered" id="tabla_pacientes" style="width:80%">
+                                        <table class="table table-bordered" id="tabla_pacientes" style="width:80%; text-align: center;">
                                             <thead class="table-primary">
                                             <tr >
                                                 <th scope="col">No.</th>
@@ -142,11 +143,11 @@ function generar_reporte(){
                                                 plantilla += `
                                                     <tr class="table-light ">
                                                         <th scope="row">${parseInt(i)+1}</th>
-                                                        <td>${response[i].Nombre}</td>
-                                                        <td>${response[i].Apellido}</td>
-                                                        <td>${response[i].Cumpleaños} </td>
-                                                        <td>${response[i].Sexo} </td>
-                                                        <td>${response[i].User_name} </td>
+                                                        <td style="text-align: center;">${response[i].Nombre}</td>
+                                                        <td style="text-align: center;">${response[i].Apellido}</td>
+                                                        <td style="text-align: center;">${response[i].Cumpleaños} </td>
+                                                        <td style="text-align: center;">${response[i].Sexo} </td>
+                                                        <td style="text-align: center;">${response[i].User_name} </td>
 
                                                     </tr>
                                                 `
