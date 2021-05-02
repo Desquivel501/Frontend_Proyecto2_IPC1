@@ -172,7 +172,7 @@ function generar_reporte(){
                                     filename:     'myfile.pdf',
                                     image:        { type: 'jpeg', quality: 0.98 },
                                     html2canvas:  { scale: 2, logging: true, dpi: 192, letterRendering: true },
-                                    jsPDF:        { unit: 'mm', format: 'a4', orientation: 'lanscape' }
+                                    jsPDF:        { unit: 'mm', format: 'a4', orientation: 'portrait' }
                                   });
                     
             })
