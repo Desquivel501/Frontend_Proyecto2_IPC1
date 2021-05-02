@@ -130,13 +130,11 @@ function generar_reporte(){
                                 <table>
                                     <tr>
                                         <td class="title">
-                                            <h1>UHospital</h1>
+                                            <h1 style="font-size: 90px;" >UHospital</h1>
                                         </td>
         
                                         <td>
-                                            Invoice #: 123<br />
-                                            Created: January 1, 2015<br />
-                                            Due: February 1, 2015
+                                            Creado el: ${d.getDay()}/${d.getMonth()}/${d.getFullYear()}
                                         </td>
                                     </tr>
                                 </table>
@@ -147,17 +145,8 @@ function generar_reporte(){
                             <td colspan="2">
                                 <table>
                                     <tr>
-                                        <td>
-                                            Sparksuite, Inc.<br />
-                                            12345 Sunny Road<br />
-                                            Sunnyville, CA 12345
-                                        </td>
-        
-                                        <td>
-                                            Acme Corp.<br />
-                                            John Doe<br />
-                                            john@example.com
-                                        </td>
+                                      <h1>Reporte de Pacientes</h1>
+                                       
                                     </tr>
                                 </table>
                             </td>
