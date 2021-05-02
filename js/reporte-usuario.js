@@ -113,6 +113,10 @@ function generar_reporte(){
                             .invoice-box.rtl table tr td:nth-child(2) {
                                 text-align: left;
                             }
+                            hr.new4 {
+                                border: 1px solid rgb(255, 255, 255);
+                                width: 50%;
+                            }
                         </style>
                     </head>
 
@@ -120,7 +124,8 @@ function generar_reporte(){
                         <div class="invoice-box">
                             <table cellpadding="0" cellspacing="0">
                                 
-                                <h1>Reporte Pacientes</h1>
+                                <h1 text-align: center;>Reporte Pacientes</h1>
+                                &nbsp;
                                         
                                         <table class="table table-bordered" id="tabla_pacientes" style="width:80%; text-align: center;">
                                             <thead class="table-primary">
