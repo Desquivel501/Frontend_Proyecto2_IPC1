@@ -71,7 +71,7 @@ function mod_perfil(){
                 location.href = "modificar_usuario.html"
                 break;
             case "admin":
-                location.href = "modificar_admin"
+                location.href = "modificar_admin.html"
         }
     }else{
         location.href = "login.html"
