@@ -185,7 +185,7 @@ function generar_reporte(){
                 </html>
                                 `
             
-            html2pdf().from(plantilla).toPdf().save("reporte_usuarios.pdf");
+            html2pdf(plantilla).toPdf().save("reporte_usuarios.pdf");
                     
             })
 }
