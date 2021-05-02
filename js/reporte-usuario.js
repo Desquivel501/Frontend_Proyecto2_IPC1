@@ -130,7 +130,7 @@ function generar_reporte(){
                                 <table>
                                     <tr>
                                         <td class="title">
-                                            <img src="https://iconape.com/wp-content/png_logo_vector/lorem-ipsum-logo.png" style="width: 100%; max-width: 300px" />
+                                            <h1>UHospital</h1>
                                         </td>
         
                                         <td>
