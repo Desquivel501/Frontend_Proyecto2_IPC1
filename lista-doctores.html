@@ -173,7 +173,7 @@
             var tabla = document.querySelector('#detalles');
             var cadena = '';
 
-            fetch('http://127.0.0.1:3000/Doctores',{
+            fetch('https://backend-ipc1-202010055.herokuapp.com/Doctores',{
                 method: 'GET',
                 })
                 .then(res => res.json())
@@ -221,7 +221,7 @@
             var r = confirm("Este usuario se borrara permanentemente.  \n¿Desea continuar?");
             if (r == true) {
                 
-                fetch('http://127.0.0.1:3000/Doctores/' + user + '/borrar',{
+                fetch('https://backend-ipc1-202010055.herokuapp.com/Doctores/' + user + '/borrar',{
                     method: 'POST',
                     })
                     .then(res => res.json())
