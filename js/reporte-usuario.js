@@ -179,8 +179,9 @@ function generar_reporte(){
                                     filename:     'myfile.pdf',
                                     image:        { type: 'jpeg', quality: 0.98 },
                                     html2canvas:  { scale: 2 },
-                                    jsPDF:        { unit: 'in', format: 'letter', orientation: 'portrait' }
+                                    jsPDF:        { unit: 'in', format: 'letter', orientation: 'L' }
                                   };
+
                                 html2pdf().set(opt).from(plantilla).save();
 
                                 /*  html2pdf().from(plantilla).save(); */
