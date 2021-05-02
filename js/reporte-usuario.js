@@ -133,8 +133,7 @@ function generar_reporte(){
                                                 <th scope="col">Cumpleaños</th>
                                                 <th scope="col">Sexo</th>
                                                 <th scope="col">Username</th>
-                                                <th scope="col">Contraseña</th>
-                                                <th scope="col">Telefono</th>
+
                                             </tr>
                                             </thead>
                                             <tbody class="table table-hover" id="detalles">`
@@ -148,8 +147,7 @@ function generar_reporte(){
                                                         <td>${response[i].Cumpleaños} </td>
                                                         <td>${response[i].Sexo} </td>
                                                         <td>${response[i].User_name} </td>
-                                                        <td>${response[i].User_pass} </td>
-                                                        <td>${response[i].Telefono} </td>
+
                                                     </tr>
                                                 `
                                             }
