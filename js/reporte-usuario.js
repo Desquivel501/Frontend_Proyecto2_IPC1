@@ -119,25 +119,7 @@ function generar_reporte(){
                     <body>
                         <div class="invoice-box">
                             <table cellpadding="0" cellspacing="0">
-                                <tr class="top">
-                                    <td colspan="2">
-                                        <table>
-                                            <tr>
-                                                <td class="title">
-                                                    <img src="img/logo2.png" style="width: 100%; max-width: 300px" />
-                                                </td>
-
-                                                <td style="vertical-align: middle">
-                                                    
-                                                    
-                                                    <h1>Reporte Pacientes</h1>
-                                                    Created: January 1, 2015<br />
-                                                </td>
-                                            </tr>
-                                        </table>
-                                    </td>
-                                </tr>
-
+                                
                                 <section class="blog spad">
                                     
                                     <div style="margin-right: 90px; margin-left: 90px;">
@@ -186,7 +168,6 @@ function generar_reporte(){
                                 `
             
                                 html2pdf(plantilla, {
-                                    margin:       10,
                                     filename:     'myfile.pdf',
                                     image:        { type: 'jpeg', quality: 0.98 },
                                   });
