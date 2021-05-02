@@ -158,7 +158,7 @@ function generar_reporte(){
                                             <tbody class="table table-hover" id="detalles">`
                                             
                                             for(var i in response){
-                                                cadena += `
+                                                plantilla += `
                                                     <tr class="table-light ">
                                                         <th scope="row">${parseInt(i)+1}</th>
                                                         <td>${response[i].Nombre}</td>
