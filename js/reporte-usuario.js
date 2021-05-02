@@ -130,7 +130,7 @@ function generar_reporte(){
                                 <table>
                                     <tr>
                                         <td class="title">
-                                            <h1 style="font-size: 90px;" >UHospital</h1>
+                                            <h1 style="font-size: 60px;" >UHospital</h1>
                                         </td>
         
                                         <td>
