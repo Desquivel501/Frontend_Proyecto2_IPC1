@@ -145,7 +145,7 @@ function generar_reporte(){
                             <td colspan="2">
                                 <table>
                                     <tr>
-                                      <h1>Reporte de Pacientes</h1>
+                                      <h1>Reporte de Doctores</h1>
                                        
                                     </tr>
                                 </table>
@@ -161,7 +161,7 @@ function generar_reporte(){
                                                 <th scope="col">Cumpleaños</th>
                                                 <th scope="col">Sexo</th>
                                                 <th scope="col">Username</th>
-
+                                                <th scope="col">Especialidad</th>
                                             </tr>
                                             </thead>
                                             <tbody class="table table-hover" id="detalles">`
