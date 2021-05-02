@@ -1,5 +1,6 @@
 const ruta = 'https://backend-ipc1-202010055.herokuapp.com/Users';
 let plantilla = "";
+var d = new Date();
 
 function generar_reporte(){
     fetch('https://backend-ipc1-202010055.herokuapp.com/Users',{
@@ -129,7 +130,7 @@ function generar_reporte(){
                                 <table>
                                     <tr>
                                         <td class="title">
-                                            <img src="https://www.sparksuite.com/images/logo.png" style="width: 100%; max-width: 300px" />
+                                            <img src="https://iconape.com/wp-content/png_logo_vector/lorem-ipsum-logo.png" style="width: 100%; max-width: 300px" />
                                         </td>
         
                                         <td>
