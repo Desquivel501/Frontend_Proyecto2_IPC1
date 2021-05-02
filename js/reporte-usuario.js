@@ -124,7 +124,7 @@ function generar_reporte(){
                                     
                                     <div style="margin-right: 90px; margin-left: 90px;">
                                         
-                                        <table class="table table-bordered" id="tabla_pacientes">
+                                        <table class="table table-bordered" id="tabla_pacientes" style="width:80%">
                                             <thead class="table-primary">
                                             <tr >
                                                 <th scope="col">No.</th>
