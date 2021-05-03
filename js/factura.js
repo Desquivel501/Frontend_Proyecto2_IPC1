@@ -3,7 +3,17 @@ var d = new Date();
 var total = 0
 var pac_name = ""
 
-function getPedido() {
+
+function generarFactura(){
+
+    var fecha = document.querySelector('#fecha').value
+    var paciente = document.querySelector('#paciente').value
+    var doctor = document.querySelector('#select2').value
+    var consulta = document.querySelector('#consulta').value
+    var operacion = document.querySelector('#operacion').value
+    var internado = document.querySelector('#internado').value
+    var total = document.querySelector('#total').value
+
             
     fetch('https://backend-ipc1-202010055.herokuapp.com/pedido',{
         method: 'GET',
@@ -136,7 +146,7 @@ function getPedido() {
                                             </td>
             
                                             <td>
-                                                Creada el: ${d.getDate()}/${parseInt(d.getMonth())+1}/${d.getFullYear()}
+                                                Creada el: ${fecha}
                                             </td>
                                         </tr>
                                     </table>
@@ -154,8 +164,10 @@ function getPedido() {
                                             </td>
             
                                             <td>
-                                                Cliente:<br />
-                                                ${pac_name}
+                                                Paciente:<br />
+                                                ${paciente}<br />
+                                                Doctor:<br />
+                                                ${doctor}
                                             </td>
                                         </tr>
                                     </table>
@@ -164,26 +176,26 @@ function getPedido() {
             
 
                             <tr class="heading">
-                                <td>Medicina</td>
+                                <td>Descripcion</td>
                                 <td style="text-align:center">Precio</td>
-                                <td style="text-align:center">Cantidad</td>
-                                <td style="text-align:center">Subtotal</td>
-                            </tr>`
+                            </tr>
 
-                            for (var i in response){ 
-                                plantilla +=`
-                                <tr class="item">
-                                    <td >${response[i].Nombre}</td>
-                                    <td style="text-align:center">Q${response[i].Precio}</td>
-                                    <td style="text-align:center">${response[i].Cantidad}</td>
-                                    <td style="text-align:center">Q${response[i].Cantidad * response[i].Precio}</td>
-                                </tr>
-                                `
-                                total += (response[i].Cantidad * response[i].Precio);
-                            }
+                            <tr class="item">
+                                <td >Costo Consulta</td>
+                                <td style="text-align:center">Q${consulta}</td>
+                            </tr>
 
+
+                            <tr class="item">
+                                <td >Costo operación</td>
+                                <td style="text-align:center">Q${operacion}</td>
+                            </tr>
+
+                            <tr class="item">
+                                <td >Costo Internado</td>
+                                <td style="text-align:center">Q${internado}</td>
+                            </tr>
                             
-                        plantilla +=`
             
                             <tr class="total">
                                 <td></td>
@@ -195,8 +207,7 @@ function getPedido() {
                 </body>
             </html>`
 
-            console.log(plantilla)
-            html2pdf().from(plantilla).save("pedido.pdf");
+            html2pdf().from(plantilla).save("factura.pdf");
            
         })
         

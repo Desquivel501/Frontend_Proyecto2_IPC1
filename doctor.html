@@ -104,7 +104,8 @@
             <div id="Recetas" class="tabcontent" style="margin-left: 0px; margin-right: 0px;">
                 <h3 style="text-align:center; margin-top: 30px; margin-bottom:30px; font-size:35px">GENERAR RECETA</h3>
                 <div class="login__form">
-                    <form >
+
+                    <form id= "receta">
                         <label for="fecha" class="form-label" style="color:white;" >Fecha</label>
                         <div class="input__item">
                             <input type="date" id="fecha" name="birthday" >
@@ -118,20 +119,18 @@
 
                         <label for="padecimiento" class="form-label" style="color:white; margin-top:10px; border-top-color: white;" >Padecimiento</label>
                         <div class="input__item">
-                            <input type="text" placeholder="Precio" id="padecimiento" value=0 onkeyup="suma_factura()">
+                            <input type="text" placeholder="Padecimeinto" id="padecimiento">
                             <span class="fa fa-medkit" ></span>
                         </div>
 
                         <label for="descripcion" class="form-label" style="color:white;" >Descripcion</label>
                         <div class="input__item">
-                            <textarea class="form-control" id="descripcion" rows="5" style="padding-left: 76px; color:black;" placeholder="Escriba el motivo de la cita"></textarea>
+                            <textarea class="form-control" id="descripcion" rows="5" style="padding-left: 76px; color:black;" placeholder="Descripción del tratamiento"></textarea>
                             <span class="fa fa-book"></span>
-                        </div>
-                        
-                        
-                        <button onclick="guardarFactura()" type="button" class="site-btn" style="margin-bottom:30px;">Generar Receta</button>
-                        
+                        </div>                       
                     </form>
+
+                    <button onclick="generarReceta()" type="button" class="site-btn" style="margin-bottom:30px;">Generar Receta</button>
                 </div>
             </div>
               
@@ -220,6 +219,9 @@
     <script src="js/owl.carousel.min.js"></script>
     <script src="js/main.js"></script>
     <script src="js/scripts.js"></script>
+
+    <script src="js/receta.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.3/html2pdf.bundle.js" integrity="sha512-dBB2PGgYedA6vzize7rsf//Q6iuUuMPvXCDybHtZP3hQXCPCD/YVJXK3QYZ2v0p7YCfVurqr8IdcSuj4CCKnGg==" crossorigin="anonymous"></script>
     
 
     <script>
@@ -240,7 +242,7 @@
         }
         document.getElementById("defaultOpen").click();
 
-    
+
 
 
 

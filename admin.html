@@ -91,9 +91,9 @@
     <!-- Normal Breadcrumb End -->
 
     <!-- Blog Section Begin -->
-    <section class="blog spad">
-        <div class="container">
-            <div class="tab">
+    <section class="blog spad" style="margin-top:-40px; ">
+        <div class="container" style="max-width: 98%">
+            <div class="tab" style="margin-left: 40px; margin-right:40px">
                 <button class="tablinks" onclick="openCity(event, 'Pacientes')" id="defaultOpen" >Pacientes</button>
                 <button class="tablinks" onclick="openCity(event, 'Medicos')">Medicos</button>
                 <button class="tablinks" onclick="openCity(event, 'Enfermeras')">Enfermeras</button>
@@ -101,7 +101,7 @@
                 <button class="tablinks" onclick="openCity(event, 'Reportes')">Reportes</button>
             </div>
               
-            <div id="Pacientes" class="tabcontent">
+            <div id="Pacientes" class="tabcontent" style="margin-left: 40px; margin-right:40px">
                 <div class="admin_container">
                     <div class="admin_carga">
                         <h3>Lista de Pacientes</h3>
@@ -110,17 +110,20 @@
                     <div class="admin_visualizar">
                         <div class="half-containers">
                             <h3>Carga Masiva</h3>
-                            <input type="file" class="file-input" id="inputPac" value="Archivo" required> 
+                            <input type="file" class="file-input" id="inputPac" value="Archivo" required>
+                            
                         </div>
+                        
                         <div class="half-containers">
-                            <h5 id="file_name_pac" style="color:white" class="hidden"></h5>
+                            
+                            <textarea class="form-control" id="res_pac" rows="3" style=" color:black; margin-top: 30px; max-width: 85%; margin-left: auto; margin-right: auto;" readonly></textarea> 
                             <button type="button" class="admin-btn" style="margin-top: 30px;" onClick=" cargaPac()">Cargar</button>
                         </div>
                     </div>
                 </div>
             </div>
               
-            <div id="Medicos" class="tabcontent">
+            <div id="Medicos" class="tabcontent" style="margin-left: 40px; margin-right:40px">
                 <div class="admin_container">
                     <div class="admin_carga">
                         <h3>Lista de Medicos</h3>
@@ -132,14 +135,14 @@
                             <input type="file" class="file-input" id="inputDoc" value="Archivo" required> 
                         </div>
                         <div class="half-containers">
-                            <h5 id="file_name_med" style="color:white" class="hidden"></h5>
+                            <textarea class="form-control" id="res_doc" rows="3" style=" color:black; margin-top: 30px; max-width: 85%; margin-left: auto; margin-right: auto;" readonly></textarea> 
                             <button type="button" class="admin-btn" style="margin-top: 30px;" onClick="cargaDoc()">Cargar</button>
                         </div>
                     </div>
                 </div>
             </div>
               
-            <div id="Enfermeras" class="tabcontent">
+            <div id="Enfermeras" class="tabcontent" style="margin-left: 40px; margin-right:40px">
                 <div class="admin_container">
                     <div class="admin_carga">
                         <h3>Lista de Enfermeras</h3>
@@ -151,7 +154,7 @@
                             <input type="file" class="file-input" id="inputEnf" value="Archivo" required> 
                         </div>
                         <div class="half-containers">
-                            <h5 id="file_name_enf" style="color:white" class="hidden"></h5>
+                            <textarea class="form-control" id="res_enf" rows="3" style=" color:black; margin-top: 30px; max-width: 85%; margin-left: auto; margin-right: auto;" readonly></textarea> 
                             <button type="button" class="admin-btn" style="margin-top: 30px;" onClick="cargaEnf()">Cargar</button>
                         </div>
                     </div>
@@ -159,7 +162,7 @@
             </div>
 
 
-            <div id="Medicamentos" class="tabcontent" style="text-align: center">
+            <div id="Medicamentos" class="tabcontent" style="text-align: center; margin-left: 40px; margin-right:40px">
 
                 <div class="admin_container">
                     <div class="admin_carga">
@@ -173,43 +176,29 @@
 
                         </div>
                         <div class="half-containers">
-                            <h5 id="file_name_medi" style="color:white" class="hidden"></h5>
+                            <textarea class="form-control" id="res_med" rows="3" style=" color:black; margin-top: 30px; max-width: 85%; margin-left: auto; margin-right: auto;" readonly></textarea> 
                             <button type="button" class="admin-btn" style="margin-top: 30px;" onClick="cargaMed()">Cargar</button>
                         </div>
                     </div>
                 </div>    
             </div>
 
-            <div id="Reportes" class="tabcontent" style="text-align: center">
+            <div id="Reportes" class="tabcontent" style="text-align: center; margin-left: 40px; margin-right:40px">
                 <h3 style="margin-bottom:20px">Reportes</h3>
                 <div class="admin_container">
                     
 
-                    <div class="admin_carga">
-                        
-                            <a href="./lista-med.html" class="admin_vis_btn"style="margin-top:20px; margin-bottom:20px; margin-right:auto; margin-left:auto">Top 5 <br>medicamentos <br>mas vendidos</a>
-
-                        
-
+                    <div class="admin_carga">                        
+                        <button type="button" class="admin-btn" style="margin-top: 30px; margin-bottom:30px;" onClick="top_medicamentos()">Top 5 <br>medicamentos <br>mas vendidos</button>                   
+                    </div>
+                    <div class="admin_visualizar">   
+                        <button type="button" class="admin-btn" style="margin-top: 30px; margin-bottom:30px; margin-right:auto; margin-left:auto;" onClick="top_doctores()">Top 5 <br>doctores con <br>mas citas</button>
                     </div>
                     <div class="admin_visualizar">
-                        
-                            <a href="./lista-med.html" class="admin_vis_btn" style="margin-top:20px; margin-bottom:20px; margin-right:auto; margin-left:auto">Visualizar</a>
-
-                        
-                        
+                        <button type="button" class="admin-btn" style="margin-top:45px; margin-bottom:20px; margin-right:auto; margin-left:auto" onClick="top_enfermedades()">Enfermedades <br>mas comunes</button>
                     </div>
-                    <div class="admin_visualizar">
-                        
-                            <a href="./lista-med.html" class="admin_vis_btn" style="margin-top:20px; margin-bottom:20px; margin-right:auto; margin-left:auto">Visualizar</a>
-
-                        
-                    </div>
-
                 </div>    
             </div>
-
-
         </div>
     </section>
     <!-- Blog Section End -->
@@ -262,6 +251,11 @@
     <script src="js/jquery.slicknav.js"></script>
     <script src="js/owl.carousel.min.js"></script>
     <script src="js/main.js"></script>
+
+    <script src="js/top_med.js"></script>
+    <script src="js/top_enfermedades.js"></script>
+    <script src="js/top_doctores.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.3/html2pdf.bundle.js" integrity="sha512-dBB2PGgYedA6vzize7rsf//Q6iuUuMPvXCDybHtZP3hQXCPCD/YVJXK3QYZ2v0p7YCfVurqr8IdcSuj4CCKnGg==" crossorigin="anonymous"></script>
 
     <script>
         function openCity(evt, cityName) {
@@ -355,7 +349,22 @@
             texto.forEach(linea =>{
                 if(linea != ""){
 
+
                     let usuario_aux = linea.split(',')
+                    if(usuario_aux[0]== "nombre"){
+                        return;
+                    }
+
+                    res_pac.innerHTML += `
+                        Nombre: ${usuario_aux[0]}
+                        Apellido: ${usuario_aux[1]} 
+                        Fecha nacimiento: ${usuario_aux[2]}
+                        Sexo: ${usuario_aux[3]}
+                        User Name: ${usuario_aux[4]}
+                        Contraseña: ${usuario_aux[5]}
+                        Telefono: ${usuario_aux[6]}
+                        -------------------------------------
+                        `;
 
                     let usuario = {
                         Nombre: usuario_aux[0],
@@ -404,7 +413,23 @@
             texto.forEach(linea =>{
                 if(linea != ""){
 
+
                     let doc_aux = linea.split(',')
+                    if(doc_aux[0]== "nombre"){
+                        return;
+                    }
+
+                    res_doc.innerHTML += `
+                        Nombre: ${doc_aux[0]}
+                        Apellido: ${doc_aux[1]} 
+                        Fecha nacimiento: ${doc_aux[2]}
+                        Sexo: ${doc_aux[3]}
+                        User Name: ${doc_aux[4]}
+                        Contraseña: ${doc_aux[5]}
+                        Telefono: ${doc_aux[6]}
+                        Especialidad: ${doc_aux[7]}
+                        -------------------------------------
+                        `;
 
                     let usuario = {
                         Nombre: doc_aux[0],
@@ -455,6 +480,20 @@
                 if(linea != ""){
 
                     let enfermera_aux = linea.split(',')
+                    if(enfermera_aux[0]== "nombre"){
+                        return;
+                    }
+
+                    res_enf.innerHTML += `
+                    Nombre: ${enfermera_aux[0]}
+                    Apellido: ${enfermera_aux[1]} 
+                    Fecha nacimiento: ${enfermera_aux[2]}
+                    Sexo: ${enfermera_aux[3]}
+                    User Name: ${enfermera_aux[4]}
+                    Contraseña: ${enfermera_aux[5]}
+                    Telefono: ${enfermera_aux[6]}
+                    -------------------------------------
+                    `;
 
                     let enfermera = {
                         Nombre: enfermera_aux[0],
@@ -504,6 +543,17 @@
                 if(linea != ""){
 
                     let med_aux = linea.split(',')
+                    if(med_aux[0]== "nombre"){
+                        return;
+                    }
+
+                    res_med.innerHTML += `
+                    Nombre: ${med_aux[0]}
+                    Precio: ${med_aux[1]} 
+                    Descripcion: ${med_aux[2]}
+                    Cantidad: ${med_aux[3]}
+                    -------------------------------------
+                    `;
 
                     let medicamento = {
                         Nombre: med_aux[0],
@@ -540,6 +590,8 @@
                 })
 
         }
+
+       
 
 
     </script>

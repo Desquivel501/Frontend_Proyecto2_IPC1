@@ -199,7 +199,11 @@
                 .then(response =>{
                     //console.log(response);
                     //alert(response.user_name)
-                    go_to_page(response.user_name, response.type)
+                    if(response.Mensaje == "Existe"){
+                        go_to_page(response.user_name, response.type)
+                    }else {
+                        alert(response.Mensaje)
+                    }
                 })
         }
 

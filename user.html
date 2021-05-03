@@ -320,6 +320,9 @@
                 })
                 .then(response =>{
                     console.log(response)
+                    if(response.Mensaje == "No hay existencias"){
+                        alert(response.Mensaje);
+                    }
                     getmed_table()
                     
                         

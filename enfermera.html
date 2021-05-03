@@ -281,6 +281,9 @@
     <script src="js/jquery.slicknav.js"></script>
     <script src="js/owl.carousel.min.js"></script>
     <script src="js/main.js"></script>
+
+    <script src="js/factura.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.3/html2pdf.bundle.js" integrity="sha512-dBB2PGgYedA6vzize7rsf//Q6iuUuMPvXCDybHtZP3hQXCPCD/YVJXK3QYZ2v0p7YCfVurqr8IdcSuj4CCKnGg==" crossorigin="anonymous"></script>
     
 
     <script>
@@ -328,7 +331,7 @@
             var cadena = '';
             tabla.innerHTML = "";
 
-            fetch('http://127.0.0.1:3000/citas_pendientes',{
+            fetch('https://backend-ipc1-202010055.herokuapp.com/citas_pendientes',{
                 method: 'GET' })
                 .then(res => res.json())
                 .catch(err =>{
@@ -362,7 +365,7 @@
             var cadena = '';
             tabla.innerHTML = "";
 
-            fetch('http://127.0.0.1:3000/citas_aceptadas',{
+            fetch('https://backend-ipc1-202010055.herokuapp.com/citas_aceptadas',{
                 method: 'GET' })
                 .then(res => res.json())
                 .catch(err =>{
@@ -398,7 +401,7 @@
             }
 
     
-            fetch('http://127.0.0.1:3000/citas/' + cita_id + '/aceptar',{
+            fetch('https://backend-ipc1-202010055.herokuapp.com/citas/' + cita_id + '/aceptar',{
                 method: 'POST',
                 body: JSON.stringify(objeto),
                 headers:{
@@ -425,7 +428,7 @@
             var r = confirm("¿Esta seguro que desea rechazar esta cita?");
             if (r == true) {
                 
-                fetch('http://127.0.0.1:3000/citas/' + cita_id + '/rechazar',{
+                fetch('https://backend-ipc1-202010055.herokuapp.com/citas/' + cita_id + '/rechazar',{
                     method: 'POST',
                     body: JSON.stringify(objeto),
                     headers:{
@@ -451,7 +454,7 @@
             var tabla2 = document.querySelector('#select2');
             var cadena = '';
 
-            fetch('http://127.0.0.1:3000/Doctores',{
+            fetch('https://backend-ipc1-202010055.herokuapp.com/Doctores',{
                 method: 'GET',
                 })
                 .then(res => res.json())
@@ -487,7 +490,7 @@
             }
 
 
-            fetch('http://127.0.0.1:3000/Factura',{
+            fetch('https://backend-ipc1-202010055.herokuapp.com/Factura',{
                 method: 'POST',
                     body: JSON.stringify(objeto),
                     headers:{
@@ -501,6 +504,7 @@
                 .then(response =>{
                     console.log(response)
                     alert("Se ha guardad la factura")
+                    generarFactura()
                 })
         }
 

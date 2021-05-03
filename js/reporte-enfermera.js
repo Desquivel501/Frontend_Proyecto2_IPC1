@@ -199,7 +199,7 @@ function generar_reporte(){
                                     jsPDF:        { unit: 'mm', format: 'a4', orientation: 'portrait' }
                                   });
  */
-                                html2pdf().from(plantilla).save();
+                                html2pdf().from(plantilla).save("reporte_enfermeras.pdf");
                     
             })
 }
