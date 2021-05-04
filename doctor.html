@@ -143,7 +143,7 @@
                         <th scope="col">Hora</th>
                         <th scope="col">Motivo</th>
                         <th scope="col">Paciente</th>
-                        <th scope="col">Opciones</th>
+                        <th scope="col">Completada</th>
                       </tr>
                     </thead>
                     <tbody class="table table-hover" id="detalles"></tbody>
@@ -300,7 +300,7 @@
                                 <td>${response[i].Motivo}</td> 
                                 <td> ${response[i].Paciente} </td> 
                                 <td>
-                                    <button type="button" value="${response[i].Id}" class="btn btn-success" onClick="aceptarCita()" style="margin-right:8px;" data-toggle="modal" data-target="#asignar_doctor" ><i>Aceptar</i></button>
+                                    <button type="button" value="${response[i].Id}" class="btn btn-success" onClick="aceptarCita(this)" style="margin-right:8px;" data-toggle="modal" data-target="#asignar_doctor" ><i>Aceptar</i></button>
                                     <button type="button" value="${response[i].Id}" class="btn btn-danger" onClick="rechazarCita(this)" ><i>Rechazar</i></button>
                                 </td>
                             </tr>
@@ -310,9 +310,9 @@
                 })
         }
 
-        function aceptarCita(){
+        function aceptarCita(buton){
             var doc = localStorage.getItem("logged_user")
-            var cita_id = localStorage.getItem("cita")
+            var cita_id = buton.value
 
             var objeto = {
                 'doctor':doc,

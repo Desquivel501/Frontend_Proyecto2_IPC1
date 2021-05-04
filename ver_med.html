@@ -3,6 +3,8 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta name="description" content="Anime Template">
+    <meta name="keywords" content="Anime, unica, creative, html">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>UHospital</title>
@@ -21,10 +23,8 @@
     <link rel="stylesheet" href="css/owl.carousel.min.css" type="text/css">
     <link rel="stylesheet" href="css/slicknav.min.css" type="text/css">
     <link rel="stylesheet" href="css/style.css" type="text/css">
-    <link rel="stylesheet" href="css/nicepage.css" type="text/css">
-    <link rel="stylesheet" href="css/Home.css" type="text/css">
-    
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/bootstrap-datepicker.css" type="text/css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css">
 
 </head>
 
@@ -63,7 +63,7 @@
                     <div class="header__right">     
                         <nav class="header__menu mobile-menu">
                             <ul style="margin-right:-80px;">  
-                                <li><a  style="margin-top:-30px; margin-right:-100px;font-size:25px" class="fa fa-user" > <span class="arrow_carrot-down"></span></a>
+                                <li><a  style="margin-top:-30px; margin-right:-100px;" class="fa fa-user" > <span class="arrow_carrot-down"></span></a>
                                     <ul class="dropdown" style="margin-top:-40px; margin-left: -30px; width: 160px;">
                                         <li onclick="mod_perfil()"><a href="#">Modificar Usuario</a></li>
                                         <li onclick="cerrar_sesion()"><a href="#">Cerrar Sesión</a></li>
@@ -81,12 +81,12 @@
     <!-- Header End -->
 
     <!-- Normal Breadcrumb Begin -->
-    <section class="normal-breadcrumb set-bg" data-setbg="img/DSC_3930.jpg" style="height: 300px;">
+    <section class="normal-breadcrumb set-bg" data-setbg="img/DSC_3930.jpg" style="height: 300px">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
                     <div class="normal__breadcrumb__text">
-                        <h2>Lista Medicamentos</h2>
+                        <h2>Visualizar Medicamento</h2>
                     </div>
                 </div>
             </div>
@@ -94,42 +94,55 @@
     </section>
     <!-- Normal Breadcrumb End -->
 
-    <!-- Blog Section Begin -->
-    <section class="blog spad">
-        <div style="margin-right: 90px; margin-left: 90px;">
-            <button onclick="back()" type="button" class="site-btn" style="text-align:center; margin-bottom:10px; margin-right:10px">Regresar</button>
-            <button onclick="generar_reporte()" type="button" class="site-btn" style="text-align:center; margin-bottom:10px;" >Generar Reporte</button>
+    <!-- Signup Section Begin -->
+ 
+    <section class="signup spad">
 
-            <table class="table table-bordered" id="tabla_pacientes">
-                <thead class="table-primary">
-                  <tr >
-                    <th scope="col">No.</th>
-                    <th scope="col">Nombre</th>
-                    <th scope="col">Descripcion</th>
-                    <th scope="col">Precio</th>
-                    <th scope="col">Cantidad</th>
-                    <th scope="col">Opciones</th>
-                  </tr>
-                </thead>
-                <tbody class="table table-hover" id="detalles"></tbody>
-              </table>
-              <button onclick="back()" type="button" class="site-btn" style="text-align:center; margin-right:10px">Regresar</button>
-              <button onclick="generar_reporte()" type="button" class="site-btn" style="text-align:center;">Generar Reporte</button>
+        <div class="login__form">
+            <form action="#">
+                <label for="name" class="form-label" style="color:white;" >Nombre</label>
+                <div class="input__item">
+                    <input type="text" placeholder="Nombre" id="nombre" readonly>
+                    <span class="fa fa-medkit"></span>
+                </div>
+
+                <label for="username" class="form-label" style="color:white;">Descripcion</label>
+                <div class="input__item">
+                    <textarea class="form-control" id="descripcion" rows="3"  placeholder="Descripcion" style=" color:black; margin-top: 30px; padding-left: 76px; margin-left: auto; margin-right: auto;" readonly></textarea> 
+                    <span class="fa fa-book"></span>
+                </div>
+
+                <label for="password" class="form-label" style="color:white;" >Cantidad</label>
+                <div class="input__item">
+                    <input type="number" placeholder="Cantidad" id="cantidad" id="password" readonly> 
+                    <span class="fa fa-shopping-cart"></span>
+                </div>
+
+                <label for="phone" class="form-label" style="color:white;" >Precio</label>
+                <div class="input__item">
+                    <input type="number" placeholder="Precio" id="precio" readonly>
+                    <span class="fa fa-money"></span>
+                </div>
+
+                <button onclick="back()" type="button" class="site-btn" style="margin-right: 10px;">Regresar</button>
+
+            </form>
         </div>
+
+       
     </section>
-    
-    <!-- Blog Section End -->
+    <!-- Signup Section End -->
 
     <!-- Footer Section Begin -->
     <footer class="footer">
         <div class="page-up">
             <a href="#" id="scrollToTopButton"><span class="arrow_carrot-up"></span></a>
-        </div>  
+        </div>
         <div class="container">
             <div class="row">
                 <div class="col-lg-3">
                     <div class="footer__logo">
-                        <a href="./index.html"><img src="img/logo.png" alt=""></a>
+                        <a href="./index.html"><img src="img/logo2_white.png"  ></a>
                     </div>
                 </div>
                 <div class="col-lg-6">
@@ -169,16 +182,18 @@
     <script src="js/owl.carousel.min.js"></script>
     <script src="js/main.js"></script>
 
-    <script src="js/reporte-med.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.3/html2pdf.bundle.js" integrity="sha512-dBB2PGgYedA6vzize7rsf//Q6iuUuMPvXCDybHtZP3hQXCPCD/YVJXK3QYZ2v0p7YCfVurqr8IdcSuj4CCKnGg==" crossorigin="anonymous"></script>
-
+    <script>
+        function back(){
+            window.history.back();
+        }
+    </script>
 
     <script>
         function get_data() {
-            var tabla = document.querySelector('#detalles');
-            var cadena = '';
 
-            fetch('https://backend-ipc1-202010055.herokuapp.com/Med',{
+            var med = localStorage.getItem("med");
+
+            fetch('https://backend-ipc1-202010055.herokuapp.com/Med/' + med,{
                 method: 'GET',
                 })
                 .then(res => res.json())
@@ -187,70 +202,16 @@
                     alert("Ha ocurrido un error")
                 })
                 .then(response =>{
-                    console.log(response)
-                    
-                    for(var i in response){
-                        cadena += `
-                            <tr class="table-light ">
-                                <th scope="row">${parseInt(i)+1}</th>
-                                <td>${response[i].Nombre}</td>
-                                <td>${response[i].Descripcion}</td>
-                                <td>${response[i].Precio}</td>
-                                <td>${response[i].Cantidad}</td> 
-                                <td>
-                                    <button type="button" value=${response[i].Id} onClick="ver_perfil(this)" class="btn btn-primary"><i class="far fa-eye"></i></button>
-                                    <button type="button" value=${response[i].Id} onClick="mod_perfil(this)" class="btn btn-success"><i class="fas fa-edit"></i></button>
-                                    <button type="button" value=${response[i].Id} onClick="del_perfil(this)" class="btn btn-danger"><i class="far fa-trash-alt"></i></button>
-                                </td>
-                            </tr>
-                        `
-                    }
-                    tabla.innerHTML = cadena;
+                    document.getElementById('nombre').value = response.Nombre;
+                    document.getElementById('descripcion').value = response.Descripcion;
+                    document.getElementById('cantidad').value = response.Cantidad;
+                    document.getElementById('precio').value = response.Precio;
                 })
-        }
 
-        function ver_perfil(boton){
-            var med = boton.value;
-            localStorage.setItem("med", med)
-            location.href= "ver_med.html"
-        }
-
-        function mod_perfil(boton){
-            var med = boton.value;
-            localStorage.setItem("med", med)
-            location.href= "modificar-med.html"
-        }
-
-        function del_perfil(boton){
-            var med = boton.value;
-            var r = confirm("Este medicamento se borrara permanentemente.  \n¿Desea continuar?");
-            if (r == true) {
-                
-                fetch('https://backend-ipc1-202010055.herokuapp.com/Med/' + med + '/borrar',{
-                    method: 'POST',
-                    })
-                    .then(res => res.json())
-                    .catch(err =>{
-                        console.log("Ha ocurrido un error");
-                        alert("Ha ocurrido un error")
-                    })
-                    .then(response =>{
-                        alert(response.Mensaje)
-                        location.reload(); 
-                    })
-
-            } else {
             
-            } 
         }
-
-
         window.onload = get_data();
-    </script>
-    <script>
-        function back(){
-            location.href= "admin.html"
-        }
+        
     </script>
 
 </body>

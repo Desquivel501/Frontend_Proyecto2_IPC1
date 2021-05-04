@@ -114,8 +114,8 @@
                             <label for="birthday" class="form-label" style="color:white;" >Fecha de Nacimiento</label>
 
                             <div class="input__item">
-                                <!-- <input type="date" id="birthday" name="birthday"> -->
-                                <input class="datepicker" id="birthday" data-date-format="mm/dd/yyyy">
+                                <input type="date" id="birthday" name="birthday">
+                                
                                 <span class="icon_calendar"></span>
                             </div>
                             
@@ -197,9 +197,6 @@
     <script src="js/main.js"></script>
 
     <script>
-        $('.birthday').datepicker({
-            format: 'dd/mm/yyyy'
-         });
 
         function button_press(){
             var pass_check = false;
@@ -241,14 +238,20 @@
                     alert("Ha ocurrido un error")
                 })
                 .then(response =>{
+                    if(response.Mensaje == "Creado"){
+                        alert("Se ha creado el usuario: " + response.User_name);
+                        go_to_page(response.User_name, "Paciente")
+                    }else if(response.Mensaje != "Creado"){
+                        console.log(response.Mensaje)
+
+                    }
                     
-                    alert("Se ha creado el usuario: " + response.User_name);
+                   
     
                 })
            }
 
         }
-        $('.datepicker').datepicker();
     </script>
 
     
